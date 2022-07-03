@@ -1,20 +1,24 @@
 <template>
-  <el-container>
-    <el-aside>Header</el-aside>
-    <el-main>
-      <div>
-        <h2>Home</h2>
-        这个页面需要包含：漂亮的背景板；<br />
-        左侧栏纯色背景；方头像+名字+名字下面小字签名；通向其他合集的链接<br />
-        右侧整个界面放最新内容（像lofter）可以有置顶<br />
-        *tips:合集分为：学习笔记，生活随笔，随便画画，网站源码
-      </div></el-main
-    >
-  </el-container>
+  <div>
+   <article-area v-bind:article="article"></article-area>
+  </div>
 </template>
 
 <script>
+import ArticleArea from '@/components/common/ArticleArea'
+
 export default {
-  name: "HomeView",
+  name:'HomeView',
+  components: {
+    ArticleArea
+  },
+   data() {
+    return {
+      article: [{
+        title: '第一条测试数据！',
+        bodyText:'这是一条测试数据\r在写博文时会使用textarea存入数据库，其换行的标识为反斜杠r，为了保持原有的文章格式，采用pre标签进行输出\r如果多次换行就会变成：\r\r这个样子'
+      }]
+    }
+  }
 };
 </script>

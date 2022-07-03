@@ -1,11 +1,17 @@
 import { createApp } from 'vue'
-import Vue from 'vue'
 import App from './App.vue'
 import router from '@/router'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import 'normalize.css'
+
+import store from '@/store'
 
 
-import ElementUI from 'element-ui'
+const app = createApp(App).use(router).use(store).use(ElementPlus)
+for (let [key, comp] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, comp);
+}
 
-Vue.use(ElementUI)
-
-createApp(App).use(router).mount('#app')
+app.mount('#app')

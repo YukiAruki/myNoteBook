@@ -6,7 +6,6 @@
     <el-main>
       <slot></slot>
     </el-main>
-    <el-aside width="300px">Aside</el-aside>
   </el-container>
 </template>
 

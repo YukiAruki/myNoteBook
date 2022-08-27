@@ -5,6 +5,7 @@ import NoteBook from '@/views/notebook/Notebook'
 import Painting from '@/views/painting/Painting'
 import About from '@/views/about/About'
 import Text from '@/views/text/Text'
+import Create from '@/views/create/Create'
 
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     path: '/painting',
     name: 'Painting',
     component: Painting,
+  },
+  {
+    path: '/create',
+    name: 'Create',
+    component: Create,
   },
   {
     path: '/about',

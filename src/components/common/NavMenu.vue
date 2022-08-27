@@ -70,6 +70,12 @@ export default {
           icon: "s-home",
         },
         {
+          path: "/create",
+          name: "Create",
+          label: "发布博文",
+          icon: "MoonNight",
+        },
+        {
           path: "/about",
           name: "About",
           label: "关于",

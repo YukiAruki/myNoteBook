@@ -12,7 +12,7 @@ import MainContainer from '@/components/mainContainer.vue'
 export default {
   name: "App",
   components:{
-    MainContainer
+    MainContainer,
   },
 };
 </script>

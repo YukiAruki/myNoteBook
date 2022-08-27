@@ -5,7 +5,7 @@
         <span>{{ title }}</span>
       </div>
     </template>
-    <div>
+    <div class="body-card">
       <pre>{{ bodyText }}</pre>
     </div>
   </el-card>
@@ -20,7 +20,7 @@ export default {
     },
     bodyText: {
       type: String,
-      default: '测试数据？\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！测试数据？\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！测试数据？\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！测试数据？\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！\n测试数据！'
+      default:"[未获取到博文]\n奇怪！这里应该是有内容的啊(´ﾟДﾟ`)"
     }
   },
   methods: {
@@ -29,14 +29,17 @@ export default {
 </script>
 
 <style>
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  line-height: 18pt;
-  text-overflow: ellipsis;
-}
-
 .box-card {
   max-height: 500px;
+  width:600px;
+}
+
+.body-card{
+  line-height: 18pt;
+  max-height: 450px;
+  width:600px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 </style>

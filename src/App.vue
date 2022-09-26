@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-  <main-container>
-    <router-view/>
-  </main-container>
+    <main-container>
+      <router-view />
+    </main-container>
   </div>
 </template>
 
@@ -11,11 +11,12 @@ import MainContainer from '@/components/mainContainer.vue'
 
 export default {
   name: "App",
-  components:{
+  components: {
     MainContainer,
   },
 };
 </script>
 
 <style>
+
 </style>

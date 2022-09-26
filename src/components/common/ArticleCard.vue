@@ -6,7 +6,7 @@
       </div>
     </template>
     <div class="body-card">
-      <pre>{{ bodyText }}</pre>
+      <pre>{{ content }}</pre>
     </div>
   </el-card>
 </template>
@@ -18,13 +18,13 @@ export default {
       type: String,
       default: ''
     },
-    bodyText: {
+    content: {
       type: String,
       default:"[未获取到博文]\n奇怪！这里应该是有内容的啊(´ﾟДﾟ`)"
     }
   },
   methods: {
-  }
+  },
 }
 </script>
 
